@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">coursework_covid19_statistics</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_country">Country</string>
+    <string name="global_cases">Global Cases</string>
+    <string name="corona_virus">Corona virus Covid-19</string>
+    <string name="total_confirmed"> Total Confirmed</string>
+    <string name="total_deaths"> Total Deaths</string>
+    <string name="total_recovered"> Total Recovered</string>
+    <string name="count">count</string>
 </resources>

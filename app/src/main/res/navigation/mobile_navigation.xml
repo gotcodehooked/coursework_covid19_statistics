@@ -9,17 +9,16 @@
         android:id="@+id/navigation_home"
         android:name="com.example.coursework_covid19_statistics.ui.home.HomeFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_country"
+            app:destination="@id/navigation_country" />
+    </fragment>
 
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.coursework_covid19_statistics.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_country"
+        android:name="com.example.coursework_covid19_statistics.ui.country.CountryFragment"
+        android:label="@string/title_country"
+        tools:layout="@layout/fragment_country" />
 
-    <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.coursework_covid19_statistics.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
 </navigation>
