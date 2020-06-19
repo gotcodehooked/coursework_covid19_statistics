@@ -105,7 +105,6 @@ public class CountryFragment extends  BaseFragment {
 
 
     private void getDataFromServer() {
-
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -121,8 +120,6 @@ public class CountryFragment extends  BaseFragment {
 
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject data = jsonArray.getJSONObject(i);
-
-
                                     JSONObject countryInfo = data.getJSONObject("countryInfo");
 
                                     countryModelList.add(new CountryModel(
@@ -132,13 +129,8 @@ public class CountryFragment extends  BaseFragment {
                                             data.getString("active"), data.getString("critical"),
                                             countryInfo.getString("flag"),
                                             countryInfo.getString("iso3")
-
-
                                     ));
                                 }
-
-
-
                                 getActivity().setTitle(jsonArray.length() + " countries");
                                 showRecyclerView();
 
@@ -151,16 +143,11 @@ public class CountryFragment extends  BaseFragment {
                         new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-
                             }
                         });
-
                 Volley.newRequestQueue(requireActivity()).add(stringRequest);
-
-
             }
         });
-
     }
 
 
